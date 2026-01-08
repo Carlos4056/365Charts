@@ -2,9 +2,7 @@ import type { StyleSpecification, LayerSpecification, SourceSpecification, Filte
 import type { MapTheme } from '$lib/components/molecules/maps/themes'; // Assegura't que la ruta és correcta
 
 // URL base del teu bucket R2
-const R2_BASE_URL = 'https://pub-127826d1442c4fc3b22ec3a2458c775b.r2.dev';
-const R2_BOUNDARIES_URL = 'https://pub-3c1cdc1acb224485b92b7e91df4fde0e.r2.dev';
-const R2_CATALONIA_URL = 'https://pub-3c1cdc1acb224485b92b7e91df4fde0e.r2.dev';
+const BASE_URL = 'www.365-charts.com';
 
 export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
     const { colors, features, text } = theme;
@@ -12,7 +10,7 @@ export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
     const sources: Record<string, SourceSpecification> = {
         'osm-source': {
             type: 'vector',
-            url: `pmtiles://${R2_BASE_URL}/protomaps-basemap-opensource-20230408.pmtiles`,
+            url: `pmtiles://${BASE_URL}/protomaps-basemap-opensource-20230408.pmtiles`,
             attribution: '© OpenStreetMap',
             minzoom:2
         }
@@ -30,14 +28,14 @@ export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
         if (theme.id === 'cat-detail') {
             sources['texture'] = {
                 type: 'raster',
-                url: `pmtiles://${R2_CATALONIA_URL}/${features.texture}`,
+                url: `pmtiles://${BASE_URL}/${features.texture}`,
                 tileSize: 512,
                 attribution: 'IGCC'
             };
         } else {
             sources['texture'] = {
                 type: 'raster',
-                url: `pmtiles://${R2_BASE_URL}/${features.texture}`,
+                url: `pmtiles://${BASE_URL}/${features.texture}`,
                 tileSize: 512,
                 attribution: 'GEBECO'
             };
@@ -47,19 +45,19 @@ export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
     if (features.showBoundariesADM0) {
         sources['boundaries-ADM0'] = {
             type: 'vector',
-            url: `pmtiles://${R2_BOUNDARIES_URL}/geoBoundariesCGAZ_ADM0.pmtiles`
+            url: `pmtiles://${BASE_URL}/geoBoundariesCGAZ_ADM0.pmtiles`
         };
     }
     if (features.showBoundariesADM1) {
         sources['boundaries-ADM1'] = {
             type: 'vector',
-            url: `pmtiles://${R2_BOUNDARIES_URL}/geoBoundariesCGAZ_ADM1.pmtiles` 
+            url: `pmtiles://${BASE_URL}/geoBoundariesCGAZ_ADM1.pmtiles` 
         };
     }
     if (features.showBoundariesADM3) { // Municipis
         sources['boundaries-ADM3'] = {
             type: 'vector',
-            url: `pmtiles://${R2_BOUNDARIES_URL}/municipalities_spain.pmtiles` 
+            url: `pmtiles://${BASE_URL}/municipalities_spain.pmtiles` 
         };
     }
 
