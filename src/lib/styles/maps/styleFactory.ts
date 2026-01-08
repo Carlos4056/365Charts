@@ -2,7 +2,7 @@ import type { StyleSpecification, LayerSpecification, SourceSpecification, Filte
 import type { MapTheme } from '$lib/components/molecules/maps/themes'; // Assegura't que la ruta és correcta
 
 // URL base del teu bucket R2
-const BASE_URL = 'www.365-charts.com';
+const BASE_URL = 'https://www.365-charts.com';
 
 export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
     const { colors, features, text } = theme;
