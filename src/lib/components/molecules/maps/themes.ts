@@ -292,7 +292,7 @@ export const THEMES: Record<string, MapTheme> = {
         },
             text: {
             textField: 'name:ca',
-            textFont: 'IBM Plex Sans',
+            textFont: 'IBM-Plex-Sans',
             textSize: 12,
             textAnchor: 'center'
         },

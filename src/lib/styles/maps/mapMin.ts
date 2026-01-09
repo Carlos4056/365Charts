@@ -18,7 +18,7 @@ export function generateStyleMini(config: MapConfig): StyleSpecification {
     const sources: { [key: string]: SourceSpecification } = {
         'boundaries-ADM0': {
             type: 'vector',
-            url: 'pmtiles://https://pub-3c1cdc1acb224485b92b7e91df4fde0e.r2.dev/geoBoundariesCGAZ_ADM0.pmtiles'
+            url: 'pmtiles://https://www.365-charts.com/geoBoundariesCGAZ_ADM0.pmtiles'
         },
         ...(showRoads ? {
             'roads-osm': {

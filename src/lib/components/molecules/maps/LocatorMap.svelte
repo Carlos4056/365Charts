@@ -46,7 +46,7 @@
             sources: {
                 'osm-mini': {
                     type: 'vector',
-                    url: 'pmtiles://https://pub-127826d1442c4fc3b22ec3a2458c775b.r2.dev/protomaps-basemap-opensource-20230408.pmtiles',
+                    url: 'pmtiles://https://www.365-charts.com/protomaps-basemap-opensource-20230408.pmtiles',
                 },
                 'view-rect': {
                     type: 'geojson',
