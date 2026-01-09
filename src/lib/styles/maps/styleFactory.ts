@@ -260,7 +260,7 @@ export function generateStyleFromTheme(theme: MapTheme): StyleSpecification {
 
     return {
         version: 8,
-        glyphs: `https://${BASE_URL}/fonts/{fontstack}/{range}.pbf`,
+        glyphs: `${BASE_URL}/fonts/{fontstack}/{range}.pbf`,
         sources: sources,
         layers: layers,
         terrain: features.showTerrain 
